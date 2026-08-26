@@ -7,16 +7,16 @@ export const site = {
   claim: "Insumos para embalaje",
   aniosExperiencia: 35,
 
-  // --- Contacto (EDITAR con tus datos reales) ----------------------
-  whatsapp: "5493810000000",              // solo números, con código país
-  telefonoVisible: "+54 9 381 000-0000",
-  email: "contacto@propacking.com.ar",
-  direccion: "San Miguel de Tucumán, Tucumán",
+  // --- Contacto ----------------------------------------------------
+  whatsapp: "5493816785474",              // solo números, con código país
+  telefonoVisible: "+54 9 381 678 5474",
+  telefonoAlt: "+54 9 381 260 8649",
+  email: "administracion@ins-propacking.com",
+  direccion: "Av. República del Líbano 1820, San Miguel de Tucumán",
   whatsappMensaje: "Hola ProPacking, quería hacer una consulta sobre insumos de embalaje.",
 
   redes: {
-    instagram: "https://instagram.com/",
-    facebook: "https://facebook.com/",
+    instagram: "https://instagram.com/propacking.tuc",
   },
 };
 

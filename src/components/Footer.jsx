@@ -43,6 +43,13 @@ export default function Footer() {
                   <Phone size={16} className="text-brand-red shrink-0" />{site.telefonoVisible}
                 </a>
               </li>
+              {site.telefonoAlt && (
+                <li>
+                  <a href={`tel:${site.telefonoAlt.replace(/\s/g, "")}`} className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
+                    <Phone size={16} className="text-brand-red shrink-0" />{site.telefonoAlt}
+                  </a>
+                </li>
+              )}
               <li>
                 <a href={`mailto:${site.email}`} className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
                   <Mail size={16} className="text-brand-red shrink-0" />{site.email}
