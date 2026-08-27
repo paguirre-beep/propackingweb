@@ -416,7 +416,7 @@ export const productos = [
     categoria: "Agro",
     universo: "agro",
     tagline: "Soluciones de empaque, protección y presentación para operaciones citrícolas.",
-    hero: "/productos/citricos/hero.jpg",
+    hero: "/productos/citricos/hero-editorial.jpg",
     heroEditorial: "/productos/citricos/hero-editorial.jpg",
     detalles: [
       { src: "/productos/citricos/hero.jpg", titulo: "Cajas para cítricos", texto: "Cajas personalizadas con gráfica propia y cajas standard para limón, listas para responder con rapidez. Representantes de Exincor." },
@@ -448,7 +448,7 @@ export const productos = [
     categoria: "Agro",
     universo: "agro",
     tagline: "Soluciones de empaque para palta, frutas y hortalizas.",
-    hero: "/productos/frutihorticolas/hero.jpg",
+    hero: "/productos/frutihorticolas/hero-editorial.jpg",
     heroEditorial: "/productos/frutihorticolas/hero-editorial.jpg",
     detalles: [
       { src: "/productos/frutihorticolas/estandar.jpg", titulo: "Diseños estándar", texto: "Cajas frutihortícolas de diseño estándar, listas para responder con rapidez a las distintas necesidades operativas del productor. Empaque, almacenamiento y despacho de palta y otros productos frutihortícolas. Representantes de la fábrica Exincor." },
@@ -478,7 +478,7 @@ export const productos = [
     categoria: "Agro",
     universo: "agro",
     tagline: "Empaque y presentación para arándanos, frutillas y frutos rojos frescos.",
-    hero: "/productos/berries/hero.jpg",
+    hero: "/productos/berries/hero-editorial.jpg",
     heroEditorial: "/productos/berries/hero-editorial.jpg",
     detalles: [
       { src: "/productos/berries/arandanos-caja.jpg", titulo: "Cajas de arándanos", texto: "Cajas de 1,5 y 2 kg diseñadas para proteger la fruta durante operaciones comerciales y de exportación. Excelente presencia, protección y practicidad operativa para el empaque, almacenamiento y despacho de arándanos frescos." },
