@@ -509,7 +509,7 @@ export const productos = [
     categoria: "Agro",
     universo: "agro",
     tagline: "Ceras y componentes Wassington para el brillo, mantenimiento y funcionamiento del proceso citrícola.",
-    hero: "/productos/tratamiento/citrowax.jpg",
+    hero: "/productos/tratamiento/hero-editorial.jpg",
     heroEditorial: "/productos/tratamiento/hero-editorial.jpg",
     detalles: [
       { src: "/productos/tratamiento/citrowax.jpg", titulo: "Citrowax M5", texto: "Cera para exportación. Disponible en tambor y contenedor. Mejora el brillo y la presentación de la fruta." },
