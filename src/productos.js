@@ -9,6 +9,7 @@ export const productos = [
     id: "frasco-hexagonal",
     nombre: "Frasco Hexagonal 190",
     categoria: "Envases de vidrio",
+    universo: "vidrio",
     tagline: "Frasco de seis caras, distintivo para conservas gourmet y velas.",
     hero: "/productos/frasco-hexagonal/hero.jpg",
     detalles: [
@@ -38,6 +39,7 @@ export const productos = [
     id: "botella-cerveza",
     nombre: "Botella Cerveza 330",
     categoria: "Botellas de vidrio",
+    universo: "vidrio",
     tagline: "Botella ámbar con filtro UV, ideal para cervezas artesanales.",
     hero: "/productos/botella-cerveza/hero.jpg",
     detalles: [
@@ -71,6 +73,7 @@ export const productos = [
     id: "frasco-yogurt",
     nombre: "Frasco Yogurt 200",
     categoria: "Envases de vidrio",
+    universo: "vidrio",
     tagline: "Frasco de boca ancha con tapa a presión, ideal para lácteos y postres.",
     hero: "/productos/frasco-yogurt/hero.jpg",
     detalles: [
@@ -104,6 +107,7 @@ export const productos = [
     id: "botella-jugo",
     nombre: "Botella Jugo 910",
     categoria: "Botellas de vidrio",
+    universo: "vidrio",
     tagline: "Botella de línea alimentaria, ideal para jugos, lácteos y bebidas.",
     hero: "/productos/botella-jugo/hero.jpg",
     detalles: [
@@ -135,6 +139,7 @@ export const productos = [
     id: "frasco-morronero",
     nombre: "Frasco Morronero 200",
     categoria: "Envases de vidrio",
+    universo: "vidrio",
     tagline: "Frasco cilíndrico compacto, ideal para conservas, mieles y velas.",
     hero: "/productos/frasco-morronero/hero.jpg",
     detalles: [
@@ -167,6 +172,7 @@ export const productos = [
     id: "botella-aceite",
     nombre: "Botella Aceite 500 cc",
     categoria: "Botellas de vidrio",
+    universo: "vidrio",
     tagline: "Botella cuadrada de vidrio cristal, ideal para aceites y aderezos.",
     hero: "/productos/botella-aceite/hero.jpg",
     detalles: [
@@ -199,6 +205,7 @@ export const productos = [
     id: "frasco-amanecer",
     nombre: "Frasco Amanecer 360",
     categoria: "Envases de vidrio",
+    universo: "vidrio",
     tagline: "Vidrio cristal de alta resistencia, con tapa Twist-Off 63.",
     // Imagen principal (para la grilla y el hero de la página)
     hero: "/productos/frasco-amanecer/hero.jpg",
@@ -236,6 +243,7 @@ export const productos = [
     id: "frasco-gigante",
     nombre: "Frasco Gigante 3000",
     categoria: "Envases de vidrio",
+    universo: "vidrio",
     tagline: "Frasco de 3 litros con boca ancha 110, ideal para conservas de gran volumen.",
     hero: "/productos/frasco-gigante/hero.jpg",
     detalles: [
@@ -270,6 +278,7 @@ export const productos = [
     id: "frasco-redondo",
     nombre: "Frasco Amanecer 250",
     categoria: "Envases de vidrio",
+    universo: "vidrio",
     tagline: "Frasco cilíndrico con tapa dorada Twist-Off 63, ideal para mermeladas y velas.",
     hero: "/productos/frasco-redondo/hero.jpg",
     detalles: [
@@ -303,6 +312,7 @@ export const productos = [
     id: "frasco-alba",
     nombre: "Frasco Alba 660",
     categoria: "Envases de vidrio",
+    universo: "vidrio",
     tagline: "Frasco alto de 660 cc con boca ancha 70, ideal para conservas y mieles.",
     hero: "/productos/frasco-alba/hero.jpg",
     detalles: [
@@ -335,6 +345,7 @@ export const productos = [
     id: "botella-jarabe",
     nombre: "Botella Jarabe 250",
     categoria: "Botellas de vidrio",
+    universo: "vidrio",
     tagline: "Botella ámbar de 250 ml con boca 28, protege del sol y admite dosificador.",
     hero: "/productos/botella-jarabe/hero.jpg",
     detalles: [
@@ -370,6 +381,7 @@ export const productos = [
     id: "botella-petaca",
     nombre: "Botella Petaca 200",
     categoria: "Botellas de vidrio",
+    universo: "vidrio",
     tagline: "Petaca plana de 200 cc con tapa metálica, ideal para licores y aceites gourmet.",
     hero: "/productos/botella-petaca/hero.jpg",
     detalles: [
@@ -396,6 +408,131 @@ export const productos = [
     usos: [
       { src: "/productos/botella-petaca/whisky-escena.jpg", nombre: "Con licor" },
       { src: "/productos/botella-petaca/bar-escena.jpg", nombre: "En la barra" },
+    ],
+  },
+  {
+    id: "citricos",
+    nombre: "Cítricos",
+    categoria: "Agro",
+    universo: "agro",
+    tagline: "Soluciones de empaque, protección y presentación para operaciones citrícolas.",
+    hero: "/productos/citricos/hero.jpg",
+    heroEditorial: "/productos/citricos/hero-editorial.jpg",
+    detalles: [
+      { src: "/productos/citricos/hero.jpg", titulo: "Cajas para cítricos", texto: "Cajas personalizadas con gráfica propia y cajas standard para limón, listas para responder con rapidez. Representantes de Exincor." },
+      { src: "/productos/citricos/sulfito.jpg", titulo: "Papel sulfito impreso", texto: "Envoltura y presentación individual del limón, personalizable, para una imagen más cuidada. Representantes de Batiflex." },
+      { src: "/productos/citricos/esquineros.jpg", titulo: "Esquineros de cartón", texto: "Protección, refuerzo y estabilización de carga paletizada. Desde 1,50 m hasta 2,30 m, simples o reforzados. Representantes de Propel S.A." },
+      { src: "/productos/citricos/cajones.jpg", titulo: "Cajones cosecheros", texto: "Cajones plásticos ventilados, apilables y resistentes, para cosecha, traslado, acopio y almacenamiento de fruta fresca." },
+    ],
+    specs: [
+      { label: "Cajas", value: "Personalizadas o standard · 17–18 kg" },
+      { label: "Papel sulfito", value: "Impreso y personalizable" },
+      { label: "Esquineros", value: "1,50 m a 2,30 m · simples o reforzados" },
+      { label: "Cajones cosecheros", value: "Plásticos, ventilados y apilables" },
+      { label: "Marcas representadas", value: "Exincor, Batiflex, Propel S.A." },
+    ],
+    aplicaciones: [
+      "Empaque y despacho de fruta fresca",
+      "Paletizado y protección de carga",
+      "Cosecha, traslado y acopio en finca",
+      "Presentación comercial y exportación",
+    ],
+    usos: [
+      { src: "/productos/citricos/esquineros.jpg", nombre: "Esquineros de protección" },
+      { src: "/productos/citricos/cajones.jpg", nombre: "Cajones cosecheros" },
+    ],
+  },
+  {
+    id: "frutihorticolas",
+    nombre: "Frutihortícolas",
+    categoria: "Agro",
+    universo: "agro",
+    tagline: "Soluciones de empaque para palta, frutas y hortalizas.",
+    hero: "/productos/frutihorticolas/hero.jpg",
+    heroEditorial: "/productos/frutihorticolas/hero-editorial.jpg",
+    detalles: [
+      { src: "/productos/frutihorticolas/estandar.jpg", titulo: "Diseños estándar", texto: "Cajas frutihortícolas de diseño estándar, listas para responder con rapidez a las distintas necesidades operativas del productor. Empaque, almacenamiento y despacho de palta y otros productos frutihortícolas. Representantes de la fábrica Exincor." },
+      { src: "/productos/frutihorticolas/personalizada.jpg", titulo: "Cajas personalizadas", texto: "Cajas premium desarrolladas por pedido, con gráfica propia del cliente y excelente presentación comercial. Fortalecen la identidad de marca y permiten diferenciarse en el punto de venta y en la exportación." },
+    ],
+    specs: [
+      { label: "Aplicación", value: "Palta, frutas y hortalizas" },
+      { label: "Presentación habitual", value: "Cajas para palta de 8 kg y 10 kg" },
+      { label: "Diseños estándar", value: "Stock listo para despacho rápido" },
+      { label: "Personalizadas", value: "Gráfica propia por pedido" },
+      { label: "Marca representada", value: "Exincor" },
+    ],
+    aplicaciones: [
+      "Empaque, almacenamiento y despacho de palta",
+      "Líneas frutihortícolas con identidad de marca",
+      "Presentación comercial en punto de venta",
+      "Exportación y diferenciación premium",
+    ],
+    usos: [
+      { src: "/productos/frutihorticolas/estandar.jpg", nombre: "Cajas estándar" },
+      { src: "/productos/frutihorticolas/personalizada.jpg", nombre: "Cajas personalizadas" },
+    ],
+  },
+  {
+    id: "berries",
+    nombre: "Berries",
+    categoria: "Agro",
+    universo: "agro",
+    tagline: "Empaque y presentación para arándanos, frutillas y frutos rojos frescos.",
+    hero: "/productos/berries/hero.jpg",
+    heroEditorial: "/productos/berries/hero-editorial.jpg",
+    detalles: [
+      { src: "/productos/berries/arandanos-caja.jpg", titulo: "Cajas de arándanos", texto: "Cajas de 1,5 y 2 kg diseñadas para proteger la fruta durante operaciones comerciales y de exportación. Excelente presencia, protección y practicidad operativa para el empaque, almacenamiento y despacho de arándanos frescos." },
+      { src: "/productos/berries/clamshells.jpg", titulo: "Clamshells de 125 y 170 g", texto: "Estuches transparentes de PET termoformado, con tapa y base unidas por bisagra. Ventilación para cadena de frío, cierre a presión, aptos para alimentos y reciclables. Protección, ventilación y conservación de arándanos y frutos rojos." },
+      { src: "/productos/berries/frutillas.jpg", titulo: "Cajas de frutillas", texto: "Bandejas para frutas seleccionadas, con ventilación y refuerzo para fruta preenfriada. Pensadas para mantener la cadena de frío a 2 °C y proteger la fruta hasta el punto de venta." },
+    ],
+    specs: [
+      { label: "Cajas de arándanos", value: "1,5 kg y 2 kg" },
+      { label: "Clamshells", value: "125 g y 170 g · PET termoformado" },
+      { label: "Cajas de frutillas", value: "Bandejas para fruta preenfriada" },
+      { label: "Características clamshell", value: "Ventilados, cierre a presión y reciclables" },
+      { label: "Aptitud", value: "Empaque comercial y de exportación" },
+    ],
+    aplicaciones: [
+      "Empaque, almacenamiento y despacho de arándanos frescos",
+      "Presentación y conservación en clamshells ventilados",
+      "Empaque de frutillas con cadena de frío a 2 °C",
+      "Operaciones comerciales y de exportación",
+    ],
+    usos: [
+      { src: "/productos/berries/clamshells.jpg", nombre: "Clamshells de arándanos" },
+      { src: "/productos/berries/frutillas.jpg", nombre: "Cajas de frutillas" },
+    ],
+  },
+  {
+    id: "tratamiento",
+    nombre: "Tratamiento y Mantenimiento",
+    categoria: "Agro",
+    universo: "agro",
+    tagline: "Ceras y componentes Wassington para el brillo, mantenimiento y funcionamiento del proceso citrícola.",
+    hero: "/productos/tratamiento/citrowax.jpg",
+    heroEditorial: "/productos/tratamiento/hero-editorial.jpg",
+    detalles: [
+      { src: "/productos/tratamiento/citrowax.jpg", titulo: "Citrowax M5", texto: "Cera para exportación. Disponible en tambor y contenedor. Mejora el brillo y la presentación de la fruta." },
+      { src: "/productos/tratamiento/emulcol.jpg", titulo: "Emulcol MI", texto: "Cera para mercado interno. Disponible en tambor y contenedor. Protección y terminación uniforme." },
+      { src: "/productos/tratamiento/panter.jpg", titulo: "Panter H", texto: "Desengrasante limpia hornos. Limpieza eficiente para hornos y máquinas en operaciones industriales." },
+      { src: "/productos/tratamiento/detersol.jpg", titulo: "Detersol FW", texto: "Lavador para fruta cítrica. Remueve suciedad adherida y fumagina en post-cosecha. Alta humectación, sin acción desinfectante." },
+    ],
+    specs: [
+      { label: "Citrowax M5", value: "Cera de exportación · tambor o contenedor" },
+      { label: "Emulcol MI", value: "Cera mercado interno · tambor o contenedor" },
+      { label: "Panter H", value: "Desengrasante limpia hornos · 5 L" },
+      { label: "Detersol FW", value: "Lavador de fruta cítrica · 5 L" },
+      { label: "Marca", value: "Wassington" },
+    ],
+    aplicaciones: [
+      "Encerado y brillo de fruta para exportación",
+      "Terminación para mercado interno",
+      "Limpieza de hornos y máquinas de empaque",
+      "Lavado de fruta en post-cosecha",
+    ],
+    usos: [
+      { src: "/productos/tratamiento/panter.jpg", nombre: "Panter H · limpieza de máquinas" },
+      { src: "/productos/tratamiento/detersol.jpg", nombre: "Detersol FW · lavado de fruta" },
     ],
   },
 ];

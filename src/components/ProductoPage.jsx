@@ -50,8 +50,8 @@ export default function ProductoPage({ producto, onBack }) {
         <section key={i} className={`py-24 sm:py-32 ${i % 2 === 0 ? "bg-white" : "bg-surface-soft"}`}>
           <div className={`container-px grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>
             <motion.div variants={scaleIn} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }}
-              className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-surface-soft">
-              <img src={d.src} alt={d.titulo} className="w-full h-full object-cover" />
+              className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-soft flex items-center justify-center p-6">
+              <img src={d.src} alt={d.titulo} className="max-w-full max-h-full object-contain" />
             </motion.div>
             <motion.div variants={reveal} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-100px" }}>
               <h2 className="font-display font-bold text-ink leading-tight" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", letterSpacing: "-0.03em" }}>
@@ -114,7 +114,7 @@ export default function ProductoPage({ producto, onBack }) {
             <div className="grid sm:grid-cols-2 gap-6">
               {producto.usos.map((u, i) => (
                 <motion.div key={u.nombre} variants={scaleIn} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-80px" }}
-                  transition={{ delay: i * 0.1 }} className="relative aspect-[4/5] rounded-2xl overflow-hidden group">
+                  transition={{ delay: i * 0.1 }} className="relative aspect-[4/3] rounded-2xl overflow-hidden group bg-surface-soft flex items-center justify-center">
                   <img src={u.src} alt={u.nombre} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   <p className="absolute bottom-6 left-6 text-white font-display font-semibold text-xl">{u.nombre}</p>

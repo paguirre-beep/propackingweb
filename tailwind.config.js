@@ -16,10 +16,12 @@ export default {
           soft: "#4B5563",
           muted: "#9CA3AF",
         },
+        gold: { DEFAULT: "#B8893D", soft: "#C89B54" },
       },
       fontFamily: {
         display: ['Inter', 'system-ui', 'sans-serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Fraunces', 'Georgia', 'serif'],
       },
       maxWidth: { content: "1200px" },
       boxShadow: {

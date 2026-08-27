@@ -5,6 +5,7 @@ const marcas = [
   { id: "wassington", nombre: "Wassington" },
   { id: "cersa", nombre: "CERSA" },
   { id: "cepindus", nombre: "Cepindus" },
+  { id: "exincor", nombre: "Exincor" },
 ];
 
 export default function Representantes() {
