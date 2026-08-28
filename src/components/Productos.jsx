@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { productos } from "../productos";
 import AgroEditorial from "./AgroEditorial";
+import IndustriaEditorial from "./IndustriaEditorial";
+import { familiasIndustria } from "../industria";
 
 const reveal = {
   hidden: { opacity: 0, y: 30 },
@@ -21,10 +23,13 @@ export default function Productos({ onOpen }) {
 
   // universos que existen realmente en el catálogo
   const universos = new Set(productos.map((p) => p.universo).filter(Boolean));
+  if (familiasIndustria.length > 0) universos.add("industria");
   const filtrosVisibles = FILTROS.filter(
     (f) => f.id === "todos" || universos.has(f.id)
   );
 
+  // "Todos" no incluye las familias de industria (tienen su propia vista);
+  // se listan solo al entrar a la pestaña Industria.
   const lista = filtro === "todos"
     ? productos
     : productos.filter((p) => p.universo === filtro);
@@ -57,7 +62,9 @@ export default function Productos({ onOpen }) {
           ))}
         </div>
 
-        {filtro === "agro" ? (
+        {filtro === "industria" ? (
+          <IndustriaEditorial />
+        ) : filtro === "agro" ? (
           <AgroEditorial productos={lista} onOpen={onOpen} />
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

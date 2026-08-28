@@ -9,10 +9,10 @@ const reveal = {
   }),
 };
 
-function Eyebrow() {
+function Eyebrow({ texto = "Agro" }) {
   return (
     <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-ink-muted">
-      Agro
+      {texto}
     </span>
   );
 }
@@ -59,7 +59,7 @@ function FeaturedCard({ producto, onOpen }) {
 
       {/* Contenido */}
       <div className="relative z-10 flex flex-col justify-center h-full max-w-[60%] p-9 lg:p-12">
-        <Eyebrow />
+        <Eyebrow texto={producto.categoria} />
         <h3
           className="font-serif text-ink leading-[0.95] mt-4 mb-5"
           style={{ fontSize: "clamp(2.6rem, 4.4vw, 4.4rem)", letterSpacing: "-0.02em" }}>
@@ -89,7 +89,7 @@ function SideCard({ producto, onOpen, i }) {
                  hover:shadow-cardHover transition-all duration-500">
       {/* Texto — zona izquierda propia */}
       <div className="relative z-10 flex flex-col justify-center w-[48%] shrink-0 p-7 lg:p-8">
-        <Eyebrow />
+        <Eyebrow texto={producto.categoria} />
         <h3
           className="font-serif text-ink leading-[1.05] mt-2.5 mb-2.5"
           style={{ fontSize: "clamp(1.45rem, 2vw, 2.1rem)", letterSpacing: "-0.02em" }}>
