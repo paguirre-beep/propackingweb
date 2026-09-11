@@ -46,6 +46,13 @@ export default function Nosotros() {
                 Empresa familiar · Tucumán, Argentina
               </p>
             </div>
+
+            {/* Firma manuscrita */}
+            <img
+              src="/firma.png"
+              alt="Firma"
+              className="mt-8 h-28 w-auto mx-auto select-none pointer-events-none"
+            />
           </motion.div>
 
           {/* Foto de la familia / depósito */}
