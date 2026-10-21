@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { familiasIndustria } from "../industria";
 
 const reveal = {
@@ -11,15 +11,74 @@ const reveal = {
   }),
 };
 
-export default function IndustriaEditorial() {
+/* Portada de Industria: banner grande con foto del depósito + botón Ver productos */
+function Portada({ onEnter }) {
+  return (
+    <motion.button
+      onClick={onEnter}
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className="group relative flex w-full text-left rounded-[32px] overflow-hidden
+                 min-h-[420px] lg:min-h-[520px] hover:shadow-cardHover transition-all duration-500">
+      {/* Foto de fondo */}
+      <div className="absolute inset-0">
+        <img
+          src="/productos/film-stretch/hero.jpg"
+          alt="Industria"
+          className="h-full w-full object-cover object-center
+                     transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-white/55 to-transparent" />
+      </div>
+
+      {/* Contenido */}
+      <div className="relative z-10 flex flex-col justify-center max-w-[60%] p-10 lg:p-16">
+        <span className="text-[11px] font-medium uppercase tracking-[0.28em] text-ink-muted">
+          Universo
+        </span>
+        <h3
+          className="font-serif text-ink leading-[0.95] mt-4 mb-5"
+          style={{ fontSize: "clamp(2.8rem, 5vw, 5rem)", letterSpacing: "-0.02em" }}>
+          Industria
+        </h3>
+        <p className="text-ink-soft text-[15px] leading-relaxed max-w-md mb-9">
+          Film, flejes, cintas, cartón y todo lo que tu operación necesita para
+          embalar, proteger y despachar con eficiencia.
+        </p>
+        <span
+          className="inline-flex items-center gap-2.5 self-start rounded-full bg-ink text-white
+                     px-7 py-3.5 text-sm font-medium transition-all duration-300
+                     group-hover:gap-4 group-hover:shadow-lg">
+          Ver productos
+          <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">
+            &rarr;
+          </span>
+        </span>
+      </div>
+    </motion.button>
+  );
+}
+
+/* Vista de productos: sub-pestañas de familias + grilla de variantes */
+function Productos({ onBack }) {
   const familias = familiasIndustria;
   const [activa, setActiva] = useState(familias[0]?.id);
   const familia = familias.find((f) => f.id === activa) || familias[0];
-
   if (!familia) return null;
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}>
+      {/* Volver a la portada */}
+      <button
+        onClick={onBack}
+        className="inline-flex items-center gap-2 text-sm font-medium text-ink-soft hover:text-ink transition-colors mb-8">
+        <span aria-hidden>&larr;</span> Volver a Industria
+      </button>
+
       {/* Sub-pestañas de familias */}
       <div className="flex flex-wrap gap-2.5 mb-10">
         {familias.map((f) => (
@@ -94,6 +153,22 @@ export default function IndustriaEditorial() {
           </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
+  );
+}
+
+export default function IndustriaEditorial() {
+  const [entrado, setEntrado] = useState(false);
+
+  return (
+    <AnimatePresence mode="wait">
+      {entrado ? (
+        <Productos key="productos" onBack={() => setEntrado(false)} />
+      ) : (
+        <div key="portada">
+          <Portada onEnter={() => setEntrado(true)} />
+        </div>
+      )}
+    </AnimatePresence>
   );
 }
