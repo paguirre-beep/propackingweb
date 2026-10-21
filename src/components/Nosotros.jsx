@@ -47,11 +47,11 @@ export default function Nosotros() {
               </p>
             </div>
 
-            {/* Firma manuscrita */}
+            {/* Nombre manuscrito */}
             <img
               src="/firma.png"
-              alt="Firma"
-              className="mt-8 h-28 w-auto mx-auto select-none pointer-events-none"
+              alt="Walter Dufayard"
+              className="mt-8 h-14 w-auto mx-auto select-none pointer-events-none"
             />
           </motion.div>
 
