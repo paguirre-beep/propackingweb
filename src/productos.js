@@ -420,7 +420,7 @@ export const productos = [
     heroEditorial: "/productos/citricos/hero-editorial.jpg",
     detalles: [
       { src: "/productos/citricos/hero.jpg", titulo: "Cajas para cítricos", texto: "Cajas personalizadas con gráfica propia y cajas standard para limón, listas para responder con rapidez. Representantes de Exincor." },
-      { src: "/productos/citricos/sulfito.jpg", titulo: "Papel sulfito impreso", texto: "Envoltura y presentación individual del limón, personalizable, para una imagen más cuidada. Representantes de Batiflex." },
+      { src: "/productos/citricos/sulfito.jpg", titulo: "Papel sulfito impreso", texto: "Envoltura y presentación individual del limón, personalizable, para una imagen más cuidada." },
       { src: "/productos/citricos/esquineros.jpg", titulo: "Esquineros de cartón", texto: "Protección, refuerzo y estabilización de carga paletizada. Desde 1,50 m hasta 2,30 m, simples o reforzados. Representantes de Propel S.A." },
       { src: "/productos/citricos/cajones.jpg", titulo: "Cajones cosecheros", texto: "Cajones plásticos ventilados, apilables y resistentes, para cosecha, traslado, acopio y almacenamiento de fruta fresca." },
     ],
