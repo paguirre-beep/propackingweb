@@ -17,7 +17,7 @@ export const familiasIndustria = [
         foto: "/productos/film-stretch/mini.jpg",
         aplicacion: "Sujeción manual de piezas pequeñas, perfiles y bultos.",
         beneficio: "Autoadherencia, resistencia y flexibilidad para asegurar piezas con rapidez.",
-        presentacion: "Cristal o negro · 18 a 30 micrones · elongación hasta 250%.",
+        presentacion: "Cristal o negro · elongación hasta 250%.",
       },
       {
         id: "manual-50-cristal",
@@ -25,15 +25,15 @@ export const familiasIndustria = [
         foto: "/productos/film-stretch/cristal.jpg",
         aplicacion: "Paletizado y protección de cargas industriales.",
         beneficio: "Aporta estabilidad, sujeción uniforme y excelente visibilidad de la carga.",
-        presentacion: "20 a 25 micrones · bobinas de 4,5 a 5 kg · elongación 250% a 300%.",
+        presentacion: "Bobinas de 4,5 a 5 kg · elongación 250% a 300%.",
       },
       {
         id: "manual-50-negro",
-        nombre: "Stretch Film Manual 50 cm Negro",
+        nombre: "Stretch Film Manual 50 cm Color",
         foto: "/productos/film-stretch/negro.jpg",
-        aplicacion: "Paletizado con mayor privacidad y seguridad visual.",
-        beneficio: "Consolida la carga y ayuda a ocultar el contenido durante la operación logística.",
-        presentacion: "20 a 25 micrones · bobinas de 4,5 a 5 kg · color negro opaco.",
+        aplicacion: "Paletizado con mayor privacidad, seguridad visual y organización por color.",
+        beneficio: "Consolida la carga, ayuda a ocultar el contenido y facilita identificar y diferenciar el material por color durante la operación logística.",
+        presentacion: "Disponible en negro, azul, rojo y otros colores · bobinas de 4,5 a 5 kg.",
       },
       {
         id: "liviano-50",
@@ -41,7 +41,7 @@ export const familiasIndustria = [
         foto: "/productos/film-stretch/liviano.jpg",
         aplicacion: "Uso manual frecuente para bultos medianos y tareas de embalaje dinámicas.",
         beneficio: "Mayor maniobrabilidad y rendimiento para operaciones ágiles.",
-        presentacion: "Bobina liviana de 3 kg · 20 a 25 micrones · formato práctico.",
+        presentacion: "Bobina liviana de 3 kg · formato práctico.",
       },
       {
         id: "roma-pack",
