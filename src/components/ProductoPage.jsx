@@ -79,6 +79,31 @@ export default function ProductoPage({ producto, onBack }) {
               </motion.div>
             ))}
           </div>
+
+          {/* DESCARGA DE FICHAS / PDF */}
+          {producto.fichas && producto.fichas.length > 0 && (
+            <motion.div variants={reveal} initial="hidden" whileInView="show" viewport={{ once: true }}
+              className="mt-16 pt-10 border-t border-white/15">
+              <p className="text-sm text-white/50 mb-6">Documentación para descargar</p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {producto.fichas.map((f) => (
+                  <a key={f.archivo} href={f.archivo} download target="_blank" rel="noopener noreferrer"
+                    className="group flex items-center gap-4 rounded-2xl border border-white/15 bg-white/5 px-5 py-4
+                               hover:bg-white/10 hover:border-white/30 transition-all duration-300">
+                    <span className="flex-shrink-0 grid place-items-center h-10 w-10 rounded-xl bg-white/10 text-white/80">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                      </svg>
+                    </span>
+                    <span className="flex-1 text-[15px] font-medium leading-snug">{f.nombre}</span>
+                    <span className="text-xs text-white/40 group-hover:text-white/70 transition-colors">PDF</span>
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          )}
         </div>
       </section>
 
