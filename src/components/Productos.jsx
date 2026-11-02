@@ -13,13 +13,20 @@ const reveal = {
 // Subpestañas por universo. Solo se muestran las que tienen productos.
 const FILTROS = [
   { id: "todos", label: "Todos" },
-  { id: "vidrio", label: "Vidrio & Envases" },
+  { id: "vidrio", label: "Envases" },
   { id: "agro", label: "Agro" },
   { id: "industria", label: "Industria" },
 ];
 
+// Sub-pestañas de material dentro de Envases
+const MATERIALES = [
+  { id: "vidrio", label: "Vidrio" },
+  { id: "pet", label: "PET" },
+];
+
 export default function Productos({ onOpen }) {
   const [filtro, setFiltro] = useState("todos");
+  const [material, setMaterial] = useState("vidrio");
 
   // universos que existen realmente en el catálogo
   const universos = new Set(productos.map((p) => p.universo).filter(Boolean));
@@ -28,11 +35,25 @@ export default function Productos({ onOpen }) {
     (f) => f.id === "todos" || universos.has(f.id)
   );
 
+  // Materiales que existen realmente dentro de Envases (vidrio por defecto si no tienen campo)
+  const materialesExistentes = new Set(
+    productos.filter((p) => p.universo === "vidrio").map((p) => p.material || "vidrio")
+  );
+  const materialesVisibles = MATERIALES.filter((m) => materialesExistentes.has(m.id));
+
   // "Todos" no incluye las familias de industria (tienen su propia vista);
   // se listan solo al entrar a la pestaña Industria.
-  const lista = filtro === "todos"
-    ? productos
-    : productos.filter((p) => p.universo === filtro);
+  let lista;
+  if (filtro === "todos") {
+    lista = productos;
+  } else if (filtro === "vidrio") {
+    // dentro de Envases, filtrar por material (vidrio / pet)
+    lista = productos.filter(
+      (p) => p.universo === "vidrio" && (p.material || "vidrio") === material
+    );
+  } else {
+    lista = productos.filter((p) => p.universo === filtro);
+  }
 
   return (
     <section id="productos" className="pt-20 pb-32 sm:pt-24 sm:pb-40 bg-white">
@@ -61,6 +82,24 @@ export default function Productos({ onOpen }) {
             </button>
           ))}
         </div>
+
+        {/* sub-pestañas de material (Vidrio / PET) dentro de Envases */}
+        {filtro === "vidrio" && materialesVisibles.length > 1 && (
+          <div className="flex flex-wrap gap-2.5 -mt-8 mb-14">
+            {materialesVisibles.map((m) => (
+              <button
+                key={m.id}
+                onClick={() => setMaterial(m.id)}
+                className={`rounded-full px-5 py-2 text-[13.5px] font-medium transition-all duration-300 border ${
+                  material === m.id
+                    ? "bg-ink text-white border-ink"
+                    : "bg-white text-ink-soft border-ink/15 hover:border-ink/40"
+                }`}>
+                {m.label}
+              </button>
+            ))}
+          </div>
+        )}
 
         {filtro === "industria" ? (
           <IndustriaEditorial />

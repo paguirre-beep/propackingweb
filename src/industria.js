@@ -45,7 +45,7 @@ export const familiasIndustria = [
       },
       {
         id: "roma-pack",
-        nombre: "Film Termocontraíble Roma Pack",
+        nombre: "Film Termocontraíble",
         foto: "/productos/film-stretch/roma-pack.jpg",
         aplicacion: "Consolidación de productos y cargas, desde pequeños volúmenes hasta unidades agrupadas.",
         beneficio: "Contracción uniforme, excelente presentación y protección del embalaje.",
