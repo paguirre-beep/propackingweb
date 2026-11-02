@@ -26,19 +26,20 @@ export default function Representantes() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mx-auto max-w-[900px] grid grid-cols-2 gap-x-8 gap-y-10 place-items-start justify-items-center
+          className="mx-auto max-w-[900px] grid grid-cols-2 gap-x-6 gap-y-8 place-items-start justify-items-center
                      sm:flex sm:flex-wrap sm:justify-between sm:items-start sm:gap-x-4 lg:gap-x-6">
           {marcas.map((m) => (
             <div
               key={m.id}
-              className="group flex flex-col items-center text-center
-                         w-full sm:w-auto sm:flex-1 sm:max-w-[190px]">
+              className={`group flex flex-col items-center text-center
+                         w-full sm:w-auto sm:flex-1 sm:max-w-[190px]
+                         ${m.id === "exincor" ? "col-span-2 sm:col-span-1" : ""}`}>
               {/* logo (gris base + color en hover) */}
-              <div className="relative flex items-center justify-center h-[52px] sm:h-[58px] w-full">
+              <div className="relative flex items-center justify-center h-[68px] sm:h-[58px] w-full">
                 <img
                   src={`/logos/${m.id}-gris.png`}
                   alt={m.nombre}
-                  className="max-h-full w-auto object-contain opacity-[0.62]
+                  className="max-h-[48px] sm:max-h-full max-w-[120px] sm:max-w-none w-auto object-contain opacity-[0.62]
                              transition-all duration-300 ease-out
                              group-hover:opacity-0 group-hover:scale-[1.03]"
                 />
@@ -46,7 +47,7 @@ export default function Representantes() {
                   src={`/logos/${m.id}-color.png`}
                   alt=""
                   aria-hidden="true"
-                  className="absolute inset-0 m-auto max-h-full w-auto object-contain opacity-0
+                  className="absolute inset-0 m-auto max-h-[48px] sm:max-h-full max-w-[120px] sm:max-w-none w-auto object-contain opacity-0
                              transition-all duration-300 ease-out
                              group-hover:opacity-100 group-hover:scale-[1.03]"
                 />

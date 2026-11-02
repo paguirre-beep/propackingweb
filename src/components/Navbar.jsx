@@ -25,10 +25,12 @@ export default function Navbar() {
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
       scrolled || open ? "bg-white/80 backdrop-blur-xl border-b border-ink/8" : "bg-transparent"
     }`}>
-      <nav className="container-px flex items-center justify-between h-20">
+      <nav className="container-px flex items-center justify-between h-[84px] lg:h-20">
         <a href="#inicio" className="flex items-center gap-2.5 shrink-0">
-          <Logo size={38} />
-          <span className="font-display font-bold text-ink text-lg tracking-tight">ProPacking</span>
+          <span className="block w-11 h-11 lg:w-[38px] lg:h-[38px]">
+            <Logo size={44} className="w-full h-full" />
+          </span>
+          <span className="font-display font-bold text-ink text-2xl lg:text-lg tracking-tight">ProPacking</span>
         </a>
 
         <ul className="hidden lg:flex items-center gap-10">
@@ -48,8 +50,8 @@ export default function Navbar() {
           </a>
         </div>
 
-        <button onClick={() => setOpen((v) => !v)} className="lg:hidden p-2 text-ink" aria-label={open ? "Cerrar menú" : "Abrir menú"}>
-          {open ? <X size={24} /> : <Menu size={24} />}
+        <button onClick={() => setOpen((v) => !v)} className="lg:hidden p-2 -mr-2 text-ink" aria-label={open ? "Cerrar menú" : "Abrir menú"}>
+          {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </nav>
 
